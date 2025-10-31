@@ -6,7 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
-import { showSuccess, showError } from '@/utils/toast';
+import { showSuccess } from '@/utils/toast';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -19,121 +19,6 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would normally send the data to your backend
-    showSuccess('Message sent successfully! We\'ll get back to you within 24 hours.');
-    setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-  };
-
-  const handleChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl text-blue-100">
-              Get in touch with our team for expert advice and service
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Info & Form */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Contact Information */}
-            <div>
-              <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
-              
-              <div className="space-y-6">
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <Phone className="w-6 h-6 text-blue-600 mt-1" />
-                      <div>
-                        <h3 className="font-semibold mb-2">Phone</h3>
-                        <p className="text-gray-600">24/7 Emergency: 0800 123 4567</p>
-                        <p className="text-gray-600">Office: 0161 234 5678</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <Mail className="w-6 h-6 text-blue-600 mt-1" />
-                      <div>
-                        <h3 className="font-semibold mb-2">Email</h3>
-                        <p className="text-gray-600">General: info@homefixexperts.co.uk</p>
-                        <p className="text-gray-600">Emergency: emergency@homefixexperts.co.uk</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <MapPin className="w-6 h-6 text-blue-600 mt-1" />
-                      <div>
-                        <h3 className="font-semibold mb-2">Address</h3>
-                        <p className="text-gray-600">
-                          123 Service Road<br />
-                          Manchester<br />
-                          M1 2AB<br />
-                          United Kingdom
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <Clock className="w-6 h-6 text-blue-600 mt-1" />
-                      <div>
-                        <h3 className="font-semibold mb-2<dyad-problem-report summary="7 problems">
-<problem file="src/pages/Index.tsx" line="6" column="45" code="2307">Cannot find module '@/data/services' or its corresponding type declarations.</problem>
-<problem file="src/pages/Index.tsx" line="7" column="30" code="2307">Cannot find module '@/data/testimonials' or its corresponding type declarations.</problem>
-<problem file="src/pages/Services.tsx" line="7" column="45" code="2307">Cannot find module '@/data/services' or its corresponding type declarations.</problem>
-<problem file="src/pages/Testimonials.tsx" line="4" column="30" code="2307">Cannot find module '@/data/testimonials' or its corresponding type declarations.</problem>
-<problem file="src/App.tsx" line="17" column="21" code="2307">Cannot find module './pages/Contact' or its corresponding type declarations.</problem>
-<problem file="src/App.tsx" line="18" column="21" code="2307">Cannot find module './pages/Booking' or its corresponding type declarations.</problem>
-<problem file="src/pages/NotFound.tsx" line="1" column="29" code="2307">Cannot find module 'react-router-dom' or its corresponding type declarations.</problem>
-</dyad-problem-report>
-<think></think>
-I'll fix all the TypeScript errors by creating the missing pages and updating the imports.
-
-<applaa-write path="src/pages/Contact.tsx" description="Contact page with form and map">
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
-import { showSuccess, showError } from '@/utils/toast';
-
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would normally send the data to your backend
     showSuccess('Message sent successfully! We\'ll get back to you within 24 hours.');
     setFormData({ name: '', email: '', phone: '', service: '', message: '' });
   };
